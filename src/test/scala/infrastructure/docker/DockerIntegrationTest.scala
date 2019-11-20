@@ -8,9 +8,10 @@ import com.whisk.docker.scalatest.DockerTestKit
 import org.scalatest._
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.prop.PropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
 trait DockerIntegrationTest
-    extends FunSpec with Matchers with GivenWhenThen
+    extends FlatSpec with Matchers with GivenWhenThen
     with DockerTestKit
     with DockerKitDockerJava
     with PropertyChecks

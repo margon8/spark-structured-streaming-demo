@@ -17,9 +17,12 @@ val scalatestVersion = "3.0.4"
 val scalacheckVersion = "1.14.0"
 val stPegdownVersion = "1.6.0"
 val asmVersion = "5.2"
-val dockerTestkitVersion = "0.9.8"
+val dockerTestkitVersion = "0.9.9"
 val playJsonVersion = "2.7.4"
 
+val jackson2Version = "2.6.7"
+
+enablePlugins(SbtPlugin)
 
 libraryDependencies ++= Seq(
 
@@ -44,8 +47,20 @@ libraryDependencies ++= Seq(
 
   // Docker
   "com.whisk" %% "docker-testkit-impl-docker-java" % dockerTestkitVersion % Test,
+  /* excludeAll(
+    ExclusionRule(organization = "com.sun.jersey")
+  ),*/
+  //"com.whisk" %% "docker-testkit-impl-spotify" % dockerTestkitVersion % Test,
   "com.whisk" %% "docker-testkit-scalatest" % dockerTestkitVersion % Test,
-  "com.whisk" %% "docker-testkit-config" % dockerTestkitVersion % Test
+  "com.whisk" %% "docker-testkit-config" % dockerTestkitVersion % Test,
 
+  //Jackson
+   "org.json4s" %% "json4s-jackson" % "3.4.2"
+  
+)
 
+dependencyOverrides ++=  Seq(
+  "com.fasterxml.jackson.core" % "jackson-core" % jackson2Version,
+  "com.fasterxml.jackson.core" % "jackson-databind" % jackson2Version,
+  "com.fasterxml.jackson.core" % "jackson-annotations" % jackson2Version
 )

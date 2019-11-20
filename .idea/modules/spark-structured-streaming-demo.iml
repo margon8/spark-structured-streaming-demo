@@ -15,8 +15,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: antlr:antlr:2.7.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scalacheck:scalacheck_2.11:1.14.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-sbt:test-interface:1.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_2.11:3.0.8:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.11:3.0.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.2.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-scalatest_2.11:0.9.9:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-core_2.11:0.9.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe:config:1.3.4:jar" level="project" />
     <orderEntry type="module-library">
       <library name="sbt: unmanaged-sources-and-docs">
         <CLASSES />
@@ -53,9 +57,6 @@
     <orderEntry type="library" name="sbt: org.slf4j:jul-to-slf4j:1.7.16:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:jcl-over-slf4j:1.7.21:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.scijava:native-lib-loader:2.0.2:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_2.11:3.0.4:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.11:3.0.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.0.6:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.11:1.1.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.11.12:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.11.12:jar" level="project" />
@@ -108,8 +109,6 @@
     <orderEntry type="library" name="sbt: org.codehaus.jackson:jackson-mapper-asl:1.9.13:jar" level="project" />
     <orderEntry type="library" name="sbt: org.codehaus.jackson:jackson-jaxrs:1.9.13:jar" level="project" />
     <orderEntry type="library" name="sbt: org.codehaus.jackson:jackson-core-asl:1.9.13:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.bouncycastle:bcprov-jdk15on:1.54:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.bouncycastle:bcpkix-jdk15on:1.54:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.zookeeper:zookeeper:3.4.13:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.yetus:audience-annotations:0.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.xbean:xbean-asm6-shaded:4.8:jar" level="project" />
@@ -242,14 +241,9 @@
     <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils-core:1.8.0:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils:1.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.yammer.metrics:metrics-core:2.2.0:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-scalatest_2.11:0.9.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-impl-docker-java_2.11:0.9.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-core_2.11:0.9.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-config_2.11:0.9.8:jar" level="project" />
     <orderEntry type="library" name="sbt: com.vlkan:flatbuffers:1.2.0-3f79e055:jar" level="project" />
     <orderEntry type="library" name="sbt: com.univocity:univocity-parsers:2.7.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.scala-logging:scala-logging_2.11:3.9.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe:config:1.3.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:parquet-hadoop-bundle:1.6.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill_2.11:0.9.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill-java:0.9.3:jar" level="project" />
@@ -265,24 +259,16 @@
     <orderEntry type="library" name="sbt: com.jolbox:bonecp:0.8.0.RELEASE:jar" level="project" />
     <orderEntry type="library" name="sbt: com.jcraft:jsch:0.1.54:jar" level="project" />
     <orderEntry type="library" name="sbt: com.jamesmurty.utils:java-xmlbuilder:0.4:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.iheart:ficus_2.11:1.4.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.googlecode.javaewah:JavaEWAH:0.3.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:2.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.inject:guice:3.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.google.guava:guava:19.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.code.findbugs:jsr305:3.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.stephenc.jcip:jcip-annotations:1.0-1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.luben:zstd-jni:1.3.2-2:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: com.github.docker-java:docker-java:3.0.13:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.11:2.6.7.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-paranamer:2.7.9:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.6.4:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.6.4:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.6.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.6.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.9.6:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.9.6:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.9.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:minlog:1.3.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:kryo-shaded:4.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.clearspring.analytics:stream:2.7.0:jar" level="project" />
@@ -460,5 +446,19 @@
     <orderEntry type="library" name="sbt: asm:asm:3.1:jar" level="project" />
     <orderEntry type="library" name="sbt: aopalliance:aopalliance:1.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.code.gson:gson:2.2.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-sbt:test-interface:1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalacheck:scalacheck_2.11:1.14.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.6.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.6.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.6.7:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.iheart:ficus_2.11:1.4.7:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-config_2.11:0.9.9:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.whisk:docker-testkit-impl-docker-java_2.11:0.9.9:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.6.4:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.6.4:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.6.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.google.guava:guava:19.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.bouncycastle:bcpkix-jdk15on:1.54:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.bouncycastle:bcprov-jdk15on:1.54:jar" level="project" />
   </component>
 </module>
