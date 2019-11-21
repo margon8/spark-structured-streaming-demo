@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="sbt: com.amazonaws:aws-java-sdk-marketplacecommerceanalytics:1.11.520:jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-marketplacecommerceanalytics/1.11.520/aws-java-sdk-marketplacecommerceanalytics-1.11.520.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-marketplacecommerceanalytics/jars/aws-java-sdk-marketplacecommerceanalytics-1.11.520.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-marketplacecommerceanalytics/1.11.520/aws-java-sdk-marketplacecommerceanalytics-1.11.520-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-marketplacecommerceanalytics/1.11.520/aws-java-sdk-marketplacecommerceanalytics-1.11.520-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-marketplacecommerceanalytics/srcs/aws-java-sdk-marketplacecommerceanalytics-1.11.520-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

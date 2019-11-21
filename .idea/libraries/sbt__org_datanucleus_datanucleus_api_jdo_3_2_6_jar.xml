@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="sbt: org.datanucleus:datanucleus-api-jdo:3.2.6:jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/datanucleus/datanucleus-api-jdo/3.2.6/datanucleus-api-jdo-3.2.6.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.datanucleus/datanucleus-api-jdo/jars/datanucleus-api-jdo-3.2.6.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/datanucleus/datanucleus-api-jdo/3.2.6/datanucleus-api-jdo-3.2.6-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/datanucleus/datanucleus-api-jdo/3.2.6/datanucleus-api-jdo-3.2.6-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.datanucleus/datanucleus-api-jdo/srcs/datanucleus-api-jdo-3.2.6-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

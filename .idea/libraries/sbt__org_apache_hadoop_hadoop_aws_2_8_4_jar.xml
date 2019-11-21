@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="sbt: org.apache.hadoop:hadoop-aws:2.8.4:jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.8.4/hadoop-aws-2.8.4.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.hadoop/hadoop-aws/jars/hadoop-aws-2.8.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

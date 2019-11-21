@@ -22,8 +22,6 @@ val playJsonVersion = "2.7.4"
 
 val jackson2Version = "2.6.7"
 
-enablePlugins(SbtPlugin)
-
 libraryDependencies ++= Seq(
 
   //Utils
