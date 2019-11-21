@@ -31,7 +31,7 @@ class SumBatchTest extends BaseTest {
         .transform(jsonScore)
         .transform(sumScores)
 
-      jsonDf.take(1)(0) shouldBe 51
+      jsonDf.collect()(0).get(0) shouldBe 51
 
     }
 

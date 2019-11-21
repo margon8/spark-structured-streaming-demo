@@ -45,7 +45,7 @@ class WindowedSumBatchTest extends BaseTest {
         .transform(windowedSumScores)
 
       jsonDf
-        .take(4)
+        .collect()
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
         ) shouldBe Seq(14, 22, 3, 12)

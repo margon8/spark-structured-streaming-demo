@@ -1,9 +1,9 @@
 import infrastructure.kafka._
 import infrastructure.test.BaseTest
-import org.apache.spark.sql.streaming.{DataStreamReader, DataStreamWriter, StreamingQuery, Trigger}
-import org.apache.spark.sql.{DataFrame, Dataset, Row}
+import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.streaming.Trigger
 
-class WindowedSumStreamingTest extends BaseTest {
+class RealSumStreamingTest extends BaseTest {
 
   import org.apache.spark.sql.functions._
   import testImplicits._
@@ -60,11 +60,11 @@ class WindowedSumStreamingTest extends BaseTest {
       query.awaitTermination(10 * 1000)
 
       spark.sql("select * from scores order by window asc")
-        .collect()
+        .take(4)
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
         ) shouldBe Seq(14, 22, 3, 12)
-
+      
     }
 
   }

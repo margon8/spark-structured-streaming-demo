@@ -12,6 +12,9 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
   val kafkaConfiguration = ConfigFactory.load().getConfig("kafka")
   val kafka = KafkaService(kafkaConfiguration)
 
+  val random = new scala.util.Random
+  val MINUTES_MS = 60000
+
   val kafkaUtils = new KafkaUtils(
     spark,
     DateTime.now.withTimeAtStartOfDay(),
@@ -24,6 +27,7 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
   val DefaultTimeoutInSec   = 3600
   val DefaultCoolDownInSec  = 60
   val MaxEventsPerPartition = 100000
+
 
   def publishToMyKafka = {
 
@@ -50,9 +54,9 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
           KafkaEvent(
             "eu.marcgonzalez.demo",
             write(event),
-            event.eventTime+60000
+            event.eventTime + event.delayInMin * MINUTES_MS + random.nextInt(100)
           )
-      )
+      ).sortBy(f => f.timestamp)
 
     publishToKafka(kafkaEvents)
 
