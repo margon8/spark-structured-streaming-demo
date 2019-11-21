@@ -54,21 +54,17 @@ class WindowedSumStreamingTest extends BaseTest {
         .outputMode("complete") //complete
         .format("memory") //console
         .queryName("scores")
-        .trigger(Trigger.Once())//.ProcessingTime("5 seconds"))
+        .trigger(Trigger.ProcessingTime("5 seconds"))
         .start()
 
-      Thread.sleep(10 * 1000)
-
-      //query.awaitTermination(5000)
+      query.awaitTermination(10 * 1000)
 
       spark.sql("select * from scores order by window asc")
         .take(4)
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
         ) shouldBe Seq(14, 22, 3, 12)
-
-      //query.stop()
-
+      
     }
 
   }
