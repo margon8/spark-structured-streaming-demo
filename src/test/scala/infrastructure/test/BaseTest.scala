@@ -14,6 +14,8 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
 
   val random = new scala.util.Random
   val MINUTES_MS = 60000
+  val SECONDS_MS = 1000
+
 
   val kafkaUtils = new KafkaUtils(
     spark,
@@ -28,10 +30,10 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
   val DefaultCoolDownInSec  = 60
   val MaxEventsPerPartition = 100000
 
+  val today = DateTime.now.withTimeAtStartOfDay()
 
-  def publishToMyKafka = {
+  private def genEvents: Seq[KafkaEvent] = {
 
-    val today = DateTime.now.withTimeAtStartOfDay()
 
     val events = Seq(
       DomainEvent(5, today.withMinuteOfHour(0).getMillis, 5),
@@ -39,8 +41,7 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
       DomainEvent(7, today.withMinuteOfHour(2).getMillis, 3),
       DomainEvent(8, today.withMinuteOfHour(3).getMillis, 4),
       DomainEvent(3, today.withMinuteOfHour(3).getMillis, 3),
-      DomainEvent(4, today.withMinuteOfHour(3).getMillis, 2),
-      DomainEvent(3, today.withMinuteOfHour(4).getMillis, 2),
+      DomainEvent(4, today.withMinuteOfHour(4).getMillis, 2),
       DomainEvent(3, today.withMinuteOfHour(6).getMillis, 1),
       DomainEvent(8, today.withMinuteOfHour(7).getMillis, 1),
       DomainEvent(1, today.withMinuteOfHour(7).getMillis, 1)
@@ -58,8 +59,22 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
           )
       ).sortBy(f => f.timestamp)
 
-    publishToKafka(kafkaEvents)
+    kafkaEvents
 
+  }
+
+  def publishToMyKafka = publishToKafka(genEvents)
+
+  def timelyPublishToMyKafka = {
+    timedPublishToKafka(genEvents)
+    while (kafka.getTopics().isEmpty
+           || kafka.offsetRangesByDatetime(
+               kafka.getTopics().head,
+               today.getMillis,
+               today.withHourOfDay(1).getMillis
+           ).numOffsets == 0) {
+      Thread.sleep(100)
+    }
   }
 
 }

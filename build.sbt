@@ -6,6 +6,9 @@ version := "0.1"
 
 scalaVersion := "2.11.12"
 
+enablePlugins(PackagingTypePlugin)
+
+
 val typesafeConfigVersion = "1.3.4"
 
 val sparkVersion = "2.4.4"
@@ -22,6 +25,10 @@ val playJsonVersion = "2.7.4"
 
 val jackson2Version = "2.6.7"
 
+val oldJersey = ExclusionRule(organization = "com.sun.jersey")
+val oldJavax = ExclusionRule(organization = "javax.ws.rs")
+
+
 libraryDependencies ++= Seq(
 
   //Utils
@@ -29,11 +36,16 @@ libraryDependencies ++= Seq(
 
   // Spark on AWS Hadoop
   "org.apache.spark" %% "spark-sql" % sparkVersion,
-  "org.apache.hadoop" % "hadoop-aws" % hadoopVersion,
+  "org.apache.hadoop" % "hadoop-aws" % hadoopVersion excludeAll(oldJersey, oldJavax),
   "com.amazonaws" % "aws-java-sdk" % awsJavaSdkVersion,
   "org.apache.kafka" %% "kafka" % kafkaVersion,
   "org.apache.spark" %% "spark-sql-kafka-0-10" % sparkVersion,
   "org.apache.spark" %% "spark-hive" % sparkVersion,
+  "io.delta" %% "delta-core" % "0.4.0",
+
+
+//Derby (local hive metastore)
+  //"org.apache.derby" % "derby" % "10.15.1.3" % Test,
 
   // ScalaTest
   "org.scalatest" %% "scalatest" % scalatestVersion % Test,
@@ -43,22 +55,25 @@ libraryDependencies ++= Seq(
   // ScalaCheck
   "org.scalacheck" %% "scalacheck" % scalacheckVersion,
 
+  //New Jersey
+  "org.glassfish.jersey.core" % "jersey-client" % "2.22.2",
+
   // Docker
-  "com.whisk" %% "docker-testkit-impl-docker-java" % dockerTestkitVersion % Test,
-  /* excludeAll(
-    ExclusionRule(organization = "com.sun.jersey")
-  ),*/
-  //"com.whisk" %% "docker-testkit-impl-spotify" % dockerTestkitVersion % Test,
-  "com.whisk" %% "docker-testkit-scalatest" % dockerTestkitVersion % Test,
-  "com.whisk" %% "docker-testkit-config" % dockerTestkitVersion % Test,
+  "com.whisk" %% "docker-testkit-impl-docker-java" % dockerTestkitVersion % Test excludeAll(oldJersey, oldJavax),
+  "com.whisk" %% "docker-testkit-scalatest" % dockerTestkitVersion % Test excludeAll(oldJersey, oldJavax),
+  "com.whisk" %% "docker-testkit-config" % dockerTestkitVersion % Test excludeAll(oldJersey, oldJavax),
 
   //Jackson
    "org.json4s" %% "json4s-jackson" % "3.4.2"
+
+
   
 )
 
 dependencyOverrides ++=  Seq(
+  "com.google.guava"           % "guava" % "16.0.1",
   "com.fasterxml.jackson.core" % "jackson-core" % jackson2Version,
   "com.fasterxml.jackson.core" % "jackson-databind" % jackson2Version,
   "com.fasterxml.jackson.core" % "jackson-annotations" % jackson2Version
+
 )

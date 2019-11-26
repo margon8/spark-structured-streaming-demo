@@ -16,6 +16,7 @@ import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecord, KafkaC
 import org.apache.kafka.clients.producer.{KafkaProducer, Producer, ProducerConfig, ProducerRecord}
 
 import scala.collection.JavaConverters._
+import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
 import scala.util.Random
 
@@ -54,6 +55,23 @@ trait KafkaDockerService extends DockerKit with DockerKitConfig with LazyLogging
       producer.send(new ProducerRecord(event.topic, null, event.timestamp, null, event.event)).get()
       // scalastyle:on null
     } finally producer.close()
+  }
+
+  protected def timedPublishToKafka(
+                                events: TraversableOnce[KafkaEvent]
+                              ): Unit = {
+    try events.foldLeft(0L){ (delay,event) =>
+       val producer: Producer[String, String] = createProducer()
+      Future {
+        if (delay != 0) Thread.sleep((event.timestamp - delay)/9)
+        println(s"Sending event $event to kafka")
+        // scalastyle:off null
+        try producer.send(new ProducerRecord(event.topic, null, event.timestamp, null, event.event)).get()
+        // scalastyle:on null
+        finally producer.close()
+      }
+      event.timestamp
+    }
   }
 
   protected def withTopicSubscription[A](topics: Seq[String])(

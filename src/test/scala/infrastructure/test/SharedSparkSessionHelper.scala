@@ -49,8 +49,8 @@ trait SharedSparkSessionHelper
     super.afterEach()
     new Directory(new File(path)).deleteRecursively()
 
-    spark.sharedState.cacheManager.clearCache()
-    spark.sessionState.catalog.reset()
+    //spark.sharedState.cacheManager.clearCache()
+    //spark.sessionState.catalog.reset()
   }
 
   protected object testImplicits extends SQLImplicits {

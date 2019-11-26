@@ -8,6 +8,9 @@
 
 .idea/vcs.xml
 target/*
+metastore_db/*
+target/*
+project/target/*
 
 # User-specific stuff
 .idea/**/workspace.xml
