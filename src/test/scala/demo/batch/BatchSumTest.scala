@@ -1,3 +1,5 @@
+package demo.batch
+
 import infrastructure.kafka._
 import infrastructure.test.BaseTest
 import org.apache.spark.sql.DataFrame

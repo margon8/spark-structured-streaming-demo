@@ -39,6 +39,8 @@ trait SharedSparkSessionHelper
       .set("spark.ui.enabled", "false")
       .set("spark.sql.sources.partitionOverwriteMode", "dynamic")
       .set("hive.stats.jdbc.timeout", "80")
+      //.set("spark.databricks.delta.autoCompact.enabled", "true")
+      //.set("spark.databricks.delta.optimizeWrite.enabled", "true")
 
   protected override def beforeEach(): Unit = {
     super.beforeEach()
@@ -49,8 +51,8 @@ trait SharedSparkSessionHelper
     super.afterEach()
     new Directory(new File(path)).deleteRecursively()
 
-    //spark.sharedState.cacheManager.clearCache()
-    //spark.sessionState.catalog.reset()
+    spark.sharedState.cacheManager.clearCache()
+    spark.sessionState.catalog.reset()
   }
 
   protected object testImplicits extends SQLImplicits {

@@ -1,3 +1,5 @@
+package demo.stream
+
 import infrastructure.kafka._
 import infrastructure.test.BaseTest
 import org.apache.spark.sql.DataFrame
@@ -68,7 +70,7 @@ class StreamRealSumTest extends BaseTest {
         .trigger(Trigger.ProcessingTime("5 seconds"))
         .start()
 
-      query.awaitTermination(15 * SECONDS_MS)
+      query.awaitTermination(20 * SECONDS_MS)
 
       spark.sql(s"select window, max(total) from $queryName group by window order by window asc")
         .collect()

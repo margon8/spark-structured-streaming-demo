@@ -45,33 +45,31 @@ trait KafkaDockerService extends DockerKit with DockerKitConfig with LazyLogging
 
   }
 
-  protected def publishToKafka(
-      events: TraversableOnce[KafkaEvent]
-  ): Unit = {
+  protected def publishToKafka(events: TraversableOnce[KafkaEvent]): Unit = {
     val producer: Producer[String, String] = createProducer()
 
     try events.foreach { event =>
       // scalastyle:off null
+      println(s"Sending event $event to kafka")
       producer.send(new ProducerRecord(event.topic, null, event.timestamp, null, event.event)).get()
       // scalastyle:on null
     } finally producer.close()
   }
 
-  protected def timedPublishToKafka(
-                                events: TraversableOnce[KafkaEvent]
-                              ): Unit = {
-    try events.foldLeft(0L){ (delay,event) =>
-       val producer: Producer[String, String] = createProducer()
-      Future {
-        if (delay != 0) Thread.sleep((event.timestamp - delay)/9)
-        println(s"Sending event $event to kafka")
-        // scalastyle:off null
-        try producer.send(new ProducerRecord(event.topic, null, event.timestamp, null, event.event)).get()
-        // scalastyle:on null
-        finally producer.close()
+  protected def timedPublishToKafka(events: TraversableOnce[KafkaEvent]): Unit = {
+
+    events.foldLeft(0L) { (lastEventTimestamp,event) =>
+        Future {
+          if (lastEventTimestamp != 0) Thread.sleep((event.timestamp - lastEventTimestamp)/15)
+          println(s"Sending delayed event $event to kafka")
+          // scalastyle:off null
+          val producer: Producer[String, String] = createProducer()
+          try producer.send(new ProducerRecord(event.topic, null, event.timestamp, null, event.event)).get()
+          finally producer.close()
+          // scalastyle:on null
+        }
+        event.timestamp
       }
-      event.timestamp
-    }
   }
 
   protected def withTopicSubscription[A](topics: Seq[String])(

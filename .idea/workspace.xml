@@ -2,196 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6637368-6ee6-4d42-896c-c1a8e9db5ee0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/PackagingTypePlugin.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/StreamDeltaTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__antlr_antlr_2_7_7_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__asm_asm_3_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_sun_jersey_jersey_core_1_9_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_sun_jersey_jersey_json_1_9_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_sun_jersey_jersey_server_1_9_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_sun_xml_bind_jaxb_impl_2_2_3_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__javax_ws_rs_javax_ws_rs_api_2_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_antlr_ST4_4_0_4_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_antlr_antlr_runtime_3_4_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_antlr_stringtemplate_3_2_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_glassfish_hk2_external_javax_inject_2_4_0_b34_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_glassfish_hk2_osgi_resource_locator_1_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/spark-structured-streaming-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/spark-structured-streaming-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/demo/ShellTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/db.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/dbex.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/log/log.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/log/log1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/log/logmirror.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c101.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c111.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c121.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c130.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c141.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c150.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c161.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c171.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c180.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c191.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1e0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c1f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c20.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c200.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c211.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c221.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c230.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c241.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c251.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c260.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c271.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c281.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c290.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c2f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c300.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c31.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c311.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c321.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c331.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c340.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c351.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c361.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c371.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c380.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c391.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c3f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c400.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c41.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c411.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c421.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c430.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c441.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c451.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c461.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c470.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c481.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c490.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c4f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c501.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c51.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c510.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c521.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c530.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c541.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c550.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c561.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c570.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c581.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c590.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c5f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c60.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c601.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c610.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c621.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c630.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c641.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c650.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c661.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c670.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c681.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c690.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c6f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c701.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c71.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c711.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c721.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c731.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c741.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c751.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c761.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c771.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c781.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c791.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c7f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c801.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c81.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c811.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c821.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c831.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c840.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c851.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c860.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c871.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c880.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c891.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8a0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c8f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c90.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c901.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c911.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c920.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c931.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c940.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c951.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c960.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c971.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c981.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c990.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9e0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/c9f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/ca01.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/ca1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/ca11.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/ca21.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/cb1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/cc0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/cd1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/ce1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/seg0/cf0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metastore_db/service.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/spark-structured-streaming-demo-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/spark-structured-streaming-demo-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/spark-structured-streaming-demo-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/spark-structured-streaming-demo-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-spark-structured-streaming-demo-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-spark-structured-streaming-demo-build-compile-internal.xml" afterDir="false" />
@@ -207,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-spark-structured-streaming-demo-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-spark-structured-streaming-demo-build-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
@@ -218,10 +29,14 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/RealSumStreamingTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/StreamRealSumTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/SumBatchTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/BatchSumTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/WindowedSumBatchTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/BatchWindowedSumTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/WindowedSumStreamingTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/StreamWindowedSumTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/BatchSumTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/batch/BatchSumTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/BatchWindowedSumTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/batch/BatchWindowedSumTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/ShellTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/StreamDeltaTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/file/StreamDeltaTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/StreamRealSumTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/stream/StreamRealSumTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/StreamWindowedSumTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/stream/StreamWindowedSumTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/StreamZFileTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/demo/file/StreamZFileTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala" afterDir="false" />
@@ -272,38 +87,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="true" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/StreamRealSumTest.scala">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/demo/batch/BatchSumTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="518">
+              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/kafka/KafkaUtils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/demo/stream/StreamRealSumTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#21#50#0" expanded="true" />
+                <element signature="e#248#287#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/test-reports/BatchSumTest.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/test-reports/SumBatchTest.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/target/test-reports/TEST-BatchSumTest.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
-              <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+            <state relative-caret-position="15">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <element signature="e#28#68#0" expanded="true" />
               </folding>
@@ -311,35 +130,62 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/demo/file/StreamDeltaTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/StreamWindowedSumTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="555">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#19#48#0" expanded="true" />
+                <element signature="e#244#283#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/StreamZFileTest.scala">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaEvent.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="938">
-              <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+            <state relative-caret-position="30">
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/demo/ShellTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
-                <element signature="e#225#264#0" expanded="true" />
+                <element signature="e#14#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -382,6 +228,7 @@
       <find>for</find>
       <find>appen</find>
       <find>should</find>
+      <find>close</find>
       <find>check</find>
     </findStrings>
   </component>
@@ -425,7 +272,6 @@
         <option value="$PROJECT_DIR$/project/site.sbt" />
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/project/build.properties" />
-        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/infrastructure/test/CommonTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/RealSumStreamingTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/3-RealSumStreamingTest.scala" />
@@ -435,20 +281,26 @@
         <option value="$PROJECT_DIR$/src/test/scala/StreamingRealTimeSumTest.scala" />
         <option value="$PROJECT_DIR$/project/PackagingTypePlugin.scala" />
         <option value="$PROJECT_DIR$/src/test/resources/conf/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/infrastructure/StreamZFileTest.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/test/scala/BatchSumTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/BatchWindowedSumTest.scala" />
         <option value="$PROJECT_DIR$/src/test/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala" />
         <option value="$PROJECT_DIR$/out/parquets_scores_1574774447672/part-00000-2ef2ae25-3db4-434d-a87c-a0221d720906-c000.snappy.parquet" />
         <option value="$PROJECT_DIR$/src/test/scala/StreamWindowedSumTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/StreamRealSumTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/StreamDeltaTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/ShellTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/StreamOnceFileTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/StreamZFileTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/StreamDeltaTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/batch/BatchSumTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/demo/stream/StreamRealSumTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/ShellTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/demo/ShellTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/demo/file/StreamDeltaTest.scala" />
       </list>
     </option>
   </component>
@@ -463,11 +315,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-556" />
-    <option name="y" value="-1440" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-441" />
+    <option name="y" value="-1417" />
     <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -529,6 +381,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spark-structured-streaming-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-structured-streaming-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spark-structured-streaming-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-structured-streaming-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spark-structured-streaming-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spark-structured-streaming-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -560,7 +438,7 @@
     <property name="SearchEverywhereHistoryKey" value="Kafka&#9;FILE&#9;file:///Users/marc.gonzalez/IdeaProjects/spark-structured-streaming-demo/src/test/scala/infrastructure/kafka/KafkaEvent.scala&#10;javax.ws.rs&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/scala/infrastructure" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/scala" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -570,9 +448,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="demo.file" />
+      <recent name="demo.stream" />
+      <recent name="batch" />
       <recent name="" />
       <recent name="infrastructure.test" />
-      <recent name="infrastructure.kafka" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
@@ -600,10 +480,71 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.StreamRealSumTest">
+  <component name="RunManager" selected="ScalaTest.BatchSumTest">
+    <configuration name="BatchSumTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="spark-structured-streaming-demo" />
+      <setting name="path" value="demo.batch.BatchSumTest" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Class" />
+      <setting name="path" value="demo.batch.BatchSumTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScalaTests in 'file'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
+      <module name="spark-structured-streaming-demo" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="All in package" />
+      <setting name="package" value="demo.file" />
+      <buffered bufClass="demo.file.StreamDeltaTest" />
+      <buffered bufClass="demo.file.StreamDeltaTest" />
+      <buffered bufClass="demo.file.StreamOnceFileTest" />
+      <buffered bufClass="demo.file.StreamOnceFileTest" />
+      <buffered bufClass="demo.file.StreamZFileTest" />
+      <buffered bufClass="demo.file.StreamZFileTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScalaTests in 'stream'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
+      <module name="spark-structured-streaming-demo" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="All in package" />
+      <setting name="package" value="demo.stream" />
+      <buffered bufClass="demo.stream.StreamRealSumTest" />
+      <buffered bufClass="demo.stream.StreamRealSumTest" />
+      <buffered bufClass="demo.stream.StreamWindowedSumTest" />
+      <buffered bufClass="demo.stream.StreamWindowedSumTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShellTest.should use as shell" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="spark-structured-streaming-demo" />
-      <setting name="path" value="ShellTest" />
+      <setting name="path" value="demo.ShellTest" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -613,7 +554,7 @@
       <setting name="useUiWithSbt" value="false" />
       <envs />
       <setting name="testKind" value="Test name" />
-      <setting name="path" value="ShellTest" />
+      <setting name="path" value="demo.ShellTest" />
       <setting name="testName" value="should use as shell" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -621,7 +562,7 @@
     </configuration>
     <configuration name="StreamDeltaTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="spark-structured-streaming-demo" />
-      <setting name="path" value="StreamDeltaTest" />
+      <setting name="path" value="demo.file.StreamDeltaTest" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -631,76 +572,25 @@
       <setting name="useUiWithSbt" value="false" />
       <envs />
       <setting name="testKind" value="Class" />
-      <setting name="path" value="StreamDeltaTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StreamRealSumTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="spark-structured-streaming-demo" />
-      <setting name="path" value="StreamRealSumTest" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <envs />
-      <setting name="testKind" value="Class" />
-      <setting name="path" value="StreamRealSumTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StreamWindowedSumTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="spark-structured-streaming-demo" />
-      <setting name="path" value="StreamWindowedSumTest" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <envs />
-      <setting name="testKind" value="Class" />
-      <setting name="path" value="StreamWindowedSumTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StreamZFileTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="spark-structured-streaming-demo" />
-      <setting name="path" value="StreamZFileTest" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <envs />
-      <setting name="testKind" value="Class" />
-      <setting name="path" value="StreamZFileTest" />
+      <setting name="path" value="demo.file.StreamDeltaTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="ScalaTest.StreamRealSumTest" />
-      <item itemvalue="ScalaTest.StreamZFileTest" />
-      <item itemvalue="ScalaTest.ShellTest.should use as shell" />
-      <item itemvalue="ScalaTest.StreamWindowedSumTest" />
+      <item itemvalue="ScalaTest.ScalaTests in 'file'" />
+      <item itemvalue="ScalaTest.ScalaTests in 'stream'" />
       <item itemvalue="ScalaTest.StreamDeltaTest" />
+      <item itemvalue="ScalaTest.ShellTest.should use as shell" />
+      <item itemvalue="ScalaTest.BatchSumTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="ScalaTest.StreamRealSumTest" />
-        <item itemvalue="ScalaTest.StreamZFileTest" />
+        <item itemvalue="ScalaTest.BatchSumTest" />
         <item itemvalue="ScalaTest.ShellTest.should use as shell" />
         <item itemvalue="ScalaTest.StreamDeltaTest" />
-        <item itemvalue="ScalaTest.StreamWindowedSumTest" />
+        <item itemvalue="ScalaTest.ScalaTests in 'stream'" />
+        <item itemvalue="ScalaTest.ScalaTests in 'file'" />
       </list>
     </recent_temporary>
   </component>
@@ -773,44 +663,44 @@
       <workItem from="1574386726718" duration="1140000" />
       <workItem from="1574388163779" duration="12396000" />
       <workItem from="1574635355752" duration="2077000" />
-      <workItem from="1574679819184" duration="20333000" />
+      <workItem from="1574679819184" duration="32172000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StreamZFileTest - 2019.11.26 at 15h 08m 19s.xml">
-      <configuration name="StreamZFileTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="All_in_spark-structured-streaming-demo - 2019.11.26 at 17h 42m 52s.xml">
+      <configuration name="All in spark-structured-streaming-demo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShellTest_should_use_as_shell - 2019.11.26 at 15h 09m 56s.xml">
+    <history-entry file="demo_in_spark-structured-streaming-demo - 2019.11.26 at 17h 43m 20s.xml">
+      <configuration name="demo in spark-structured-streaming-demo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="demo_in_spark-structured-streaming-demo - 2019.11.26 at 17h 43m 27s.xml">
+      <configuration name="demo in spark-structured-streaming-demo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScalaTests_in_'batch' - 2019.11.26 at 17h 46m 03s.xml">
+      <configuration name="ScalaTests in 'batch'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ScalaTests_in_'file' - 2019.11.26 at 17h 47m 41s.xml">
+      <configuration name="ScalaTests in 'file'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ScalaTests_in_'stream' - 2019.11.26 at 17h 49m 21s.xml">
+      <configuration name="ScalaTests in 'stream'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="StreamDeltaTest - 2019.11.27 at 11h 20m 36s.xml">
+      <configuration name="StreamDeltaTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="StreamDeltaTest - 2019.11.27 at 11h 54m 47s.xml">
+      <configuration name="StreamDeltaTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ShellTest_should_use_as_shell - 2019.11.27 at 11h 55m 18s.xml">
       <configuration name="ShellTest.should use as shell" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="ShellTest_should_use_as_shell - 2019.11.26 at 15h 12m 02s.xml">
+    <history-entry file="ShellTest_should_use_as_shell - 2019.11.27 at 11h 56m 02s.xml">
       <configuration name="ShellTest.should use as shell" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamZFileTest - 2019.11.26 at 15h 12m 22s.xml">
-      <configuration name="StreamZFileTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamZFileTest - 2019.11.26 at 15h 12m 46s.xml">
-      <configuration name="StreamZFileTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamZFileTest - 2019.11.26 at 15h 13m 45s.xml">
-      <configuration name="StreamZFileTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamRealSumTest - 2019.11.26 at 15h 19m 01s.xml">
-      <configuration name="StreamRealSumTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamRealSumTest - 2019.11.26 at 15h 25m 00s.xml">
-      <configuration name="StreamRealSumTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamRealSumTest - 2019.11.26 at 15h 26m 34s.xml">
-      <configuration name="StreamRealSumTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="StreamRealSumTest - 2019.11.26 at 15h 27m 22s.xml">
-      <configuration name="StreamRealSumTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113099000" />
+    <option name="totallyTimeSpent" value="124938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,16 +712,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-556" y="-1440" width="2560" height="1440" extended-state="0" />
+    <frame x="-441" y="-1417" width="2560" height="1417" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25893566" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12907068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7734628" visible="true" weight="0.2591241" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7734628" weight="0.17433962" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49919093" weight="0.38248175" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -843,7 +734,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32919708" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" visible="true" weight="0.32830188" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -959,99 +850,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.sun.jersey/jersey-core/srcs/jersey-core-1.9-sources.jar!/javax/ws/rs/core/MultivaluedMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.glassfish.jersey.core/jersey-client/srcs/jersey-client-2.23.1-sources.jar!/org/glassfish/jersey/client/ClientRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="344" column="14" selection-start-line="344" selection-start-column="14" selection-end-line="344" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/srcs/javax.ws.rs-api-2.0.1-sources.jar!/javax/ws/rs/core/UriBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.sun.jersey/jersey-core/srcs/jersey-core-1.9-sources.jar!/javax/ws/rs/core/UriBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="688" selection-start-line="688" selection-end-line="688" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/parquets/part-00000-788328e4-6167-47f4-9c45-e3610d323e0b-c000.snappy.parquet">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/parquets/part-00000-6f722bf2-4b11-454f-8570-827cd67552d4-c000.snappy.parquet">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/checkpoint/metadata">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/streaming/StreamingQueryManager.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="351" column="28" selection-start-line="351" selection-start-column="28" selection-end-line="351" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="698" column="38" selection-start-line="698" selection-start-column="38" selection-end-line="698" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/execution/streaming/StreamExecution.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="258" column="6" selection-start-line="258" selection-start-column="6" selection-end-line="258" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/execution/streaming/ProgressReporter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/Function0.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/execution/streaming/TriggerExecutor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1063,13 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaEvent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1094,13 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="676" column="6" selection-start-line="676" selection-start-column="6" selection-end-line="676" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/streaming/DataStreamWriter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="243" column="6" selection-start-line="243" selection-start-column="6" selection-end-line="243" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1135,13 +919,6 @@
     <entry file="file://$PROJECT_DIR$/metastore_db/README_DO_NOT_TOUCH_FILES.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/kafka/KafkaUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/kafka/KafkaService.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1163,14 +940,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/BatchSumTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/BatchWindowedSumTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/batch/BatchWindowedSumTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="3" selection-start-line="12" selection-start-column="2" selection-end-line="55" selection-end-column="3" />
@@ -1208,80 +978,8 @@
     <entry file="file://$PROJECT_DIR$/out/delta/scores_1574776815718/part-00000-04a6cda9-7a79-4522-bb8c-40e877cd3ff6-c000.snappy.parquet">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/ShellTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/parquets/scores_1574777278502/part-00000-d3d30a27-73a9-4e42-b158-acf55f943208-c000.snappy.parquet">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/StreamDeltaTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-          <folding>
-            <element signature="e#28#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/StreamZFileTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#225#264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/StreamWindowedSumTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/StreamRealSumTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/test-reports/BatchSumTest.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1290,7 +988,182 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/test-reports/TEST-BatchSumTest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-core_2.11/srcs/spark-core_2.11-2.4.4-sources.jar!/org/apache/spark/api/java/function/VoidFunction2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql_2.11/srcs/spark-sql_2.11-2.4.4-sources.jar!/org/apache/spark/sql/streaming/DataStreamWriter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="388" column="37" selection-start-line="388" selection-start-column="37" selection-end-line="388" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/clients/producer/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/clients/producer/ProducerRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="93" column="11" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/parquets/scores_1574785072146/part-00000-5d8549c6-f8d8-49a9-a27e-a948753269a6-c000.snappy.parquet">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/parquets/scores_1574785072146/part-00000-8042a964-077d-424c-b29f-08834743ba41-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/stream/StreamWindowedSumTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/file/StreamOnceFileTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="74" column="31" selection-start-line="74" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/stream/StreamRealSumTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+          <folding>
+            <element signature="e#21#50#0" expanded="true" />
+            <element signature="e#248#287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/file/StreamZFileTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <folding>
+            <element signature="e#19#48#0" expanded="true" />
+            <element signature="e#244#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-3.0.8-sources.jar!/org/scalatest/MatchersHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574786639616/_delta_log/00000000000000000000.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/part-00000-97e59341-c2fa-4149-8d9e-a16d1cc71a98-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/part-00002-01763f5f-ad57-44ef-9f67-498bf6acfa7d-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/part-00112-0747b9b8-e38a-4b96-b9d1-14db6417fcb7-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/part-00169-a010f79e-a129-4849-885f-a307f5ed7d1a-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/part-00197-1482d8d2-2a9c-4d33-844a-a82bd5b46fcd-c000.snappy.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/ShellTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding>
+            <element signature="e#14#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/delta/scores_1574849993318/_delta_log/00000000000000000001.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaEvent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/DomainEvent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/SharedSparkSessionHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/kafka/KafkaUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/batch/BatchSumTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/kafka/KafkaDockerService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/infrastructure/test/BaseTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#28#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/demo/file/StreamDeltaTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding>
+            <element signature="e#19#48#0" expanded="true" />
+            <element signature="e#244#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

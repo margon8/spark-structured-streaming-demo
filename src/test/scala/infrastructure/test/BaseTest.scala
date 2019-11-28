@@ -32,49 +32,59 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
 
   val today = DateTime.now.withTimeAtStartOfDay()
 
-  private def genEvents: Seq[KafkaEvent] = {
-
+  private def genEvents(withEOF: Boolean = false): Seq[KafkaEvent] = {
 
     val events = Seq(
-      DomainEvent(5, today.withMinuteOfHour(0).getMillis, 5),
-      DomainEvent(9, today.withMinuteOfHour(1).getMillis, 7),
-      DomainEvent(7, today.withMinuteOfHour(2).getMillis, 3),
-      DomainEvent(8, today.withMinuteOfHour(3).getMillis, 4),
-      DomainEvent(3, today.withMinuteOfHour(3).getMillis, 3),
-      DomainEvent(4, today.withMinuteOfHour(4).getMillis, 2),
-      DomainEvent(3, today.withMinuteOfHour(6).getMillis, 1),
-      DomainEvent(8, today.withMinuteOfHour(7).getMillis, 1),
-      DomainEvent(1, today.withMinuteOfHour(7).getMillis, 1)
+      DomainEvent(5, today.withMinuteOfHour(0).getMillis, today.withMinuteOfHour(5).getMillis),
+      DomainEvent(9, today.withMinuteOfHour(1).getMillis, today.withMinuteOfHour(8).getMillis),
+      DomainEvent(7, today.withMinuteOfHour(2).getMillis, today.withMinuteOfHour(5).getMillis),
+      DomainEvent(8, today.withMinuteOfHour(3).getMillis, today.withMinuteOfHour(7).getMillis),
+      DomainEvent(3, today.withMinuteOfHour(3).getMillis, today.withMinuteOfHour(6).getMillis),
+      DomainEvent(4, today.withMinuteOfHour(4).getMillis, today.withMinuteOfHour(6).getMillis),
+      DomainEvent(3, today.withMinuteOfHour(6).getMillis, today.withMinuteOfHour(7).getMillis),
+      DomainEvent(8, today.withMinuteOfHour(7).getMillis, today.withMinuteOfHour(8).getMillis),
+      DomainEvent(1, today.withMinuteOfHour(7).getMillis, today.withMinuteOfHour(9).getMillis),
+      DomainEvent(0, today.withMinuteOfHour(10).getMillis, today.withMinuteOfHour(11).getMillis)
     )
 
     implicit val formats = Serialization.formats(NoTypeHints)
 
     val kafkaEvents =
-      events.map(
-        event =>
+      events
+        .filter(_.score > 0)
+        .map(event =>
           KafkaEvent(
             "eu.marcgonzalez.demo",
             write(event),
-            event.eventTime + event.delayInMin * MINUTES_MS + random.nextInt(100)
+            event.procTime + random.nextInt(100)
           )
       ).sortBy(f => f.timestamp)
 
     kafkaEvents
-
   }
 
-  def publishToMyKafka = publishToKafka(genEvents)
+  def publishToMyKafka = publishToKafka(genEvents())
 
   def timelyPublishToMyKafka = {
-    timedPublishToKafka(genEvents)
+    timedPublishToKafka(genEvents())
+    kafkaSemaphore
+  }
+
+  def timelyPublishToMyKafkaWithEof = {
+    timedPublishToKafka(genEvents(true))
+    kafkaSemaphore
+  }
+
+  private def kafkaSemaphore = {
     while (kafka.getTopics().isEmpty
-           || kafka.offsetRangesByDatetime(
+           || kafka
+             .offsetRangesByDatetime(
                kafka.getTopics().head,
                today.getMillis,
                today.withHourOfDay(1).getMillis
-           ).numOffsets == 0) {
+             )
+             .numOffsets == 0) {
       Thread.sleep(100)
     }
   }
-
 }

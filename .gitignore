@@ -11,6 +11,7 @@ target/*
 metastore_db/*
 target/*
 project/target/*
+project/*
 
 # User-specific stuff
 .idea/**/workspace.xml

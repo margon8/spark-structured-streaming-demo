@@ -1,10 +1,12 @@
+package demo.file
+
 import infrastructure.kafka._
 import infrastructure.test.BaseTest
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.streaming.Trigger
 import org.joda.time.DateTime
 
-class StreamZFileTest extends BaseTest {
+class StreamOnceFileTest extends BaseTest {
 
   import org.apache.spark.sql.functions._
   import testImplicits._
@@ -22,6 +24,8 @@ class StreamZFileTest extends BaseTest {
       .select(col("struct.*"), 'procTime)
       .selectExpr("timestamp(eventTime/1000) as eventTime", "score", "procTime")
 
+  def parse(df: DataFrame): DataFrame =
+    jsonScoreAndDate(selectKafkaContent(df))
 
   def sumScores(df: DataFrame): DataFrame =
     df.agg(sum("score").as("total"))
@@ -31,7 +35,7 @@ class StreamZFileTest extends BaseTest {
       window($"eventTime", "2 minutes")
     ).agg(sum("score").as("total"))
 
-  it should "write into files" in {
+  it should "write once into files" in {
 
     publishToMyKafka
 
@@ -55,26 +59,26 @@ class StreamZFileTest extends BaseTest {
       df.isStreaming shouldBe true
 
       val jsonDf = df
-        .transform(selectKafkaContent)
-        .transform(jsonScoreAndDate)
+        .transform(parse)
         .withWatermark("eventTime", "2 minutes")
         .transform(windowedSumScores)
 
-      val query = jsonDf.writeStream
+      val query = jsonDf
+        .writeStream
         .outputMode("append")
-        .format("console")
-        //.option("checkpointLocation", s"out/checkpoint/$queryName")
-        //.option("path", s"out/parquets/$queryName/")
-        .trigger(Trigger.Once())//.ProcessingTime("5 seconds"))
+        .format("parquet") //console
+        .option("path", s"out/parquets/$queryName/")
+        .trigger(Trigger.Once())
+        .option("checkpointLocation", s"out/checkpoint/$queryName")
         .start()
 
-      query.awaitTermination(60*SECONDS_MS)
+      query.awaitTermination(20 * SECONDS_MS)
 
-      /*spark.read.parquet(s"out/parquets/$queryName/")
+      spark.read.parquet(s"out/parquets/$queryName/")
         .collect()
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
-        ) shouldBe Seq(14, 22, 3, 12)*/
+        ) shouldBe Seq(14, 18, 4, 12)
       
     }
 

@@ -1,15 +1,17 @@
+package demo.stream
+
 import infrastructure.kafka._
 import infrastructure.test.BaseTest
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.streaming.Trigger
 import org.joda.time.DateTime
 
-class StreamDeltaTest extends BaseTest {
+class StreamWindowedSumTest extends BaseTest {
+
+  val queryName = s"scores_${DateTime.now().getMillis}"
 
   import org.apache.spark.sql.functions._
   import testImplicits._
-
-  val queryName = s"scores_${DateTime.now().getMillis}"
 
   def selectKafkaContent(df: DataFrame): DataFrame =
     df.selectExpr("CAST(value AS STRING) as sValue","timestamp")
@@ -22,25 +24,23 @@ class StreamDeltaTest extends BaseTest {
       .select(col("struct.*"), 'procTime)
       .selectExpr("timestamp(eventTime/1000) as eventTime", "score", "procTime")
 
+  def parse(df: DataFrame): DataFrame = {
+    jsonScoreAndDate(selectKafkaContent(df))
+  }
 
   def sumScores(df: DataFrame): DataFrame =
     df.agg(sum("score").as("total"))
 
   def windowedSumScores(df: DataFrame): DataFrame =
     df.groupBy(
-      window($"eventTime", "2 minutes")
+      window($"eventTime", "2 minutes").as("window")
     ).agg(sum("score").as("total"))
 
-  it should "write into delta" in {
+  it should "sum 14,18,4,12 after streaming everything in 2 minute windows" in {
 
-    timelyPublishToMyKafka
+    publishToMyKafka
 
     kafka.getTopics().size shouldBe 1
-    kafka.offsetRangesByDatetime(
-      kafka.getTopics().head,
-      today.getMillis,
-      today.withHourOfDay(1).getMillis
-    ).numOffsets should be > 0L
 
     val topicsAndOffsets = kafkaUtils.getTopicsAndOffsets("eu.marcgonzalez.demo")
     topicsAndOffsets.foreach { topicAndOffset: TopicAndOffsets =>
@@ -54,30 +54,27 @@ class StreamDeltaTest extends BaseTest {
       df.isStreaming shouldBe true
 
       val jsonDf = df
-        .transform(selectKafkaContent)
-        .transform(jsonScoreAndDate)
-        .withWatermark("eventTime", "2 minutes")
+        .transform(parse)
         .transform(windowedSumScores)
 
       val query = jsonDf.writeStream
-        .outputMode("append") //update
-        .format("delta")
-        .option("checkpointLocation", "out/checkpoint/")
-        .option("path", s"out/delta/$queryName")
-        .trigger(Trigger.Once())//.ProcessingTime("5 seconds"))
+        .outputMode("update") //complete
+        .format("memory") //console
+        .queryName(queryName)
+        .trigger(Trigger.ProcessingTime("5 seconds")) //Once
         .start()
 
-      query.awaitTermination(60*SECONDS_MS)
+      query.awaitTermination(10 * 1000)
 
-      spark.read.format("delta").load(s"out/delta/$queryName")
+      spark.sql(s"select * from $queryName order by window asc")
         .collect()
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
-        ) shouldBe Seq(5, 22, 3, 12)
-      
+        ) shouldBe Seq(14, 18, 4, 12)
+
     }
 
   }
 
-
 }
+
