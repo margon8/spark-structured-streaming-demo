@@ -36,8 +36,7 @@ class BatchWindowedSumTest extends BaseTest {
 
     kafka.getTopics().size shouldBe 1
 
-    val topicsAndOffsets =
-      kafkaUtils.getTopicsAndOffsets("eu.marcgonzalez.demo")
+    val topicsAndOffsets = kafkaUtils.getTopicsAndOffsets("eu.marcgonzalez.demo")
     topicsAndOffsets.foreach { topicAndOffset: TopicAndOffsets =>
       val df = kafkaUtils
         .load(topicAndOffset, kafkaConfiguration)
