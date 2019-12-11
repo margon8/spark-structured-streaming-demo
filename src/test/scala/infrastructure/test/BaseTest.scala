@@ -44,14 +44,16 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
       DomainEvent(3, today.withMinuteOfHour(6).getMillis, today.withMinuteOfHour(7).getMillis),
       DomainEvent(8, today.withMinuteOfHour(7).getMillis, today.withMinuteOfHour(8).getMillis),
       DomainEvent(1, today.withMinuteOfHour(7).getMillis, today.withMinuteOfHour(9).getMillis),
-      DomainEvent(0, today.withMinuteOfHour(10).getMillis, today.withMinuteOfHour(11).getMillis)
+      DomainEvent(0, today.withMinuteOfHour(11).getMillis, today.withMinuteOfHour(12).getMillis)
     )
 
     implicit val formats = Serialization.formats(NoTypeHints)
 
     val kafkaEvents =
       events
-        .filter(_.score > 0)
+        .filter(event => {
+          if(!withEOF) {event.score > 0} else {true}
+        })
         .map(event =>
           KafkaEvent(
             "eu.marcgonzalez.demo",
@@ -64,6 +66,10 @@ abstract class BaseTest extends DockerIntegrationTest with KafkaDockerService wi
   }
 
   def publishToMyKafka = publishToKafka(genEvents())
+
+  def publishToMyKafkaWithEof = {
+    publishToKafka(genEvents(true))
+  }
 
   def timelyPublishToMyKafka = {
     timedPublishToKafka(genEvents())

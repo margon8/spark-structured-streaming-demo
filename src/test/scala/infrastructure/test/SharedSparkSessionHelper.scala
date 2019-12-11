@@ -39,8 +39,8 @@ trait SharedSparkSessionHelper
       .set("spark.ui.enabled", "false")
       .set("spark.sql.sources.partitionOverwriteMode", "dynamic")
       .set("hive.stats.jdbc.timeout", "80")
-      //.set("spark.databricks.delta.autoCompact.enabled", "true")
-      //.set("spark.databricks.delta.optimizeWrite.enabled", "true")
+      //.set("spark.databricks.delta.autoCompact.enabled", "true") //does not work in opensource version
+      //.set("spark.databricks.delta.optimizeWrite.enabled", "true") //does not work in opensource version
 
   protected override def beforeEach(): Unit = {
     super.beforeEach()

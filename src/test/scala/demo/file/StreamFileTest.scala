@@ -6,7 +6,7 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.streaming.Trigger
 import org.joda.time.DateTime
 
-class StreamZFileTest extends BaseTest {
+class StreamFileTest extends BaseTest {
 
   import org.apache.spark.sql.functions._
   import testImplicits._
@@ -35,9 +35,9 @@ class StreamZFileTest extends BaseTest {
       window($"eventTime", "2 minutes")
     ).agg(sum("score").as("total"))
 
-  it should "write into files" in {
+  it should "write closed windows into files" in {
 
-    timelyPublishToMyKafka
+    timelyPublishToMyKafkaWithEof
 
     kafka.getTopics().size shouldBe 1
     kafka.offsetRangesByDatetime(
@@ -52,7 +52,7 @@ class StreamZFileTest extends BaseTest {
         .format("kafka")
         .option("kafka.bootstrap.servers", "localhost:9092")
         .option("startingOffsets", "earliest")
-        .option("failOnDataLoss", "false")
+        .option("failOnDataLoss", "true")
         .option("subscribe", topicAndOffset.topic)
         .load()
 
@@ -66,19 +66,19 @@ class StreamZFileTest extends BaseTest {
       val query = jsonDf
         .writeStream
         .outputMode("append")
-        .format("parquet") //console
+        .format("parquet")
+        .option("checkpointLocation", s"out/checkpoint/$queryName")
         .option("path", s"out/parquets/$queryName/")
         .trigger(Trigger.ProcessingTime("5 seconds"))
-        .option("checkpointLocation", s"out/checkpoint/$queryName")
         .start()
 
-      query.awaitTermination(20 * SECONDS_MS)
+      query.awaitTermination(30 * SECONDS_MS)
 
-      spark.read.parquet(s"out/parquets/$queryName/")
+      spark.read.parquet(s"out/parquets/$queryName/").orderBy("window")
         .collect()
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
-        ) shouldBe Seq(5, 18)//, 4, 12)
+        ) shouldBe Seq(5, 18)
       
     }
 

@@ -6,7 +6,7 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.streaming.Trigger
 import org.joda.time.DateTime
 
-class StreamOnceFileTest extends BaseTest {
+class StreamOnceParquetTest extends BaseTest {
 
   import org.apache.spark.sql.functions._
   import testImplicits._
@@ -35,7 +35,7 @@ class StreamOnceFileTest extends BaseTest {
       window($"eventTime", "2 minutes")
     ).agg(sum("score").as("total"))
 
-  it should "write once into files" in {
+  it should "write closed windows into files" in {
 
     publishToMyKafka
 
@@ -52,7 +52,7 @@ class StreamOnceFileTest extends BaseTest {
         .format("kafka")
         .option("kafka.bootstrap.servers", "localhost:9092")
         .option("startingOffsets", "earliest")
-        .option("failOnDataLoss", "false")
+        .option("failOnDataLoss", "true")
         .option("subscribe", topicAndOffset.topic)
         .load()
 
@@ -65,20 +65,22 @@ class StreamOnceFileTest extends BaseTest {
 
       val query = jsonDf
         .writeStream
-        .outputMode("append")
-        .format("parquet") //console
+        .foreachBatch((df,_) => {
+            df.write.parquet(s"out/parquets/$queryName/")
+          })
+        .outputMode("complete")
         .option("path", s"out/parquets/$queryName/")
-        .trigger(Trigger.Once())
         .option("checkpointLocation", s"out/checkpoint/$queryName")
+        .trigger(Trigger.Once)
         .start()
 
-      query.awaitTermination(20 * SECONDS_MS)
+      query.awaitTermination()
 
-      spark.read.parquet(s"out/parquets/$queryName/")
+      spark.read.parquet(s"out/parquets/$queryName/").orderBy("window")
         .collect()
         .foldLeft(Seq.empty[Int])(
           (a, v) => a ++ Seq(v.get(1).asInstanceOf[Long].toInt)
-        ) shouldBe Seq()
+        ) shouldBe Seq(14, 18, 4, 12)
       
     }
 
